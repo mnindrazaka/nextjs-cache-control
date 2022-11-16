@@ -13,7 +13,7 @@ export const getStaticProps: GetStaticProps<ProductListScreenProps> = async (
     page,
     path: "/products-ssg",
   });
-  return { props };
+  return { props, revalidate: 60 };
 };
 
 export default ProductListScreen;
