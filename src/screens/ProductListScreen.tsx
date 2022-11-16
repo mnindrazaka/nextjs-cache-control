@@ -78,8 +78,7 @@ export function ProductListScreen(props: ProductListScreenProps) {
           <p>loading...</p>
         ) : error ? (
           <p>{error}</p>
-        ) : productsResponse === null ||
-          productsResponse.products.length === 0 ? (
+        ) : (productsResponse?.products.length ?? 0) === 0 ? (
           <p>empty data</p>
         ) : (
           <>
